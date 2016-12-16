@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --hot"
   },
-  "author": "",
+  "author": "hirdesh-crypto",
   "license": "ISC",
   "dependencies": {
     "babel-cli": "^6.18.0",
