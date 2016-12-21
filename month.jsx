@@ -39,6 +39,8 @@ var Month = React.createClass({
     handleDayMouseEnter (day) {
         if (this.props.onDayMouseEnter) {
             this.props.onDayMouseEnter(day)
+            console.log(day);
+            var day2 = day.clone().add(1, 'days');
         }
     },
 
