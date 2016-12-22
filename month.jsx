@@ -1,7 +1,6 @@
 import React from 'react'
 import classnames from 'classnames'
 import Week from './week.jsx'
-
 const FIXED_HEIGHT_STANDARD_WEEK_COUNT = 6
 
 var Month = React.createClass({
@@ -35,6 +34,7 @@ var Month = React.createClass({
             this.props.onDayClick(day, event)
         }
     },
+
 
     handleDayMouseEnter (day) {
         if (this.props.onDayMouseEnter) {

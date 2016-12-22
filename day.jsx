@@ -4,6 +4,12 @@ import classnames from 'classnames'
 import { isSameDay, isDayDisabled, isDayInRange } from './date_utils'
 let dates = [moment(), moment().add(3, "days")];
 var Day = React.createClass({
+    getInitialState (){
+        return {hover: false}
+    },
+    toggleHover (abc){
+        this.setState({hover: !this.state.hover})
+    },
     displayName: 'Day',
 
     propTypes: {
@@ -146,6 +152,12 @@ var Day = React.createClass({
     },
 
     render () {
+        var linkStyle;
+        if (this.state.hover) {
+            linkStyle = {backgroundColor: 'red'}
+        } else {
+            linkStyle = {backgroundColor: 'blue'}
+        }
         return (
             <div
                 className={this.getClassNames()}

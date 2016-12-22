@@ -24,13 +24,12 @@ var config = {
                 , loader: 'json-loader'
             }
             , {
-                test: /\.(css|scss)$/
-                , loaders:[
-                    'style',
-                    'css',
-                    'sass',
-                    'postcss'
-                ]
+                test: /\.(css)$/
+                , loader: 'style!css'
+            }
+            , {
+                test: /\.scss$/,
+                loaders: ['style', 'css', 'sass']
             }
         ]
     }
